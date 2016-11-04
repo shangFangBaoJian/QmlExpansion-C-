@@ -4,13 +4,14 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT += core gui widgets xml qml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+DESTDIR += ../../bin
 TARGET = lifeIsChose
-TEMPLATE = app
 
+TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp
