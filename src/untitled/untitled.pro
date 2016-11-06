@@ -16,7 +16,6 @@ MOC_DIR=../../build/$$TARGET/moc
 #可执行文件路径
 DESTDIR += ../../bin
 
-
 TARGET = untitled
 TEMPLATE = app
 
