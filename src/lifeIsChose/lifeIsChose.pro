@@ -8,13 +8,7 @@ QT += core gui widgets xml qml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-#构建路径
-OBJECTS_DIR=../../build/$$TARGET/obj
-MOC_DIR=../../build/$$TARGET/moc
-
-
-#可执行文件路径
-DESTDIR += ../../bin
+DESTDIR +=../bin
 TARGET = lifeIsChose
 
 TEMPLATE = app
