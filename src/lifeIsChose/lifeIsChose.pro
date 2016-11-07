@@ -15,4 +15,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp
 
+#加载图标文件
+RC_FILE  = logo.rc
+
 HEADERS  +=
+
+DISTFILES += \
+    logo.rc \
+
+

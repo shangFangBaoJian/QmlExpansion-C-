@@ -1,11 +1,10 @@
-#include "mainwindow.h"
 #include <QApplication>
+#include<QWindow>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+   a.setWindowIcon(QIcon("picture/v7.ico"));
 
     return a.exec();
 }
