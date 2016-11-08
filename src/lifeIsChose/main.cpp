@@ -4,16 +4,27 @@
 #include<QWindow>
 #include <QQuickView>
 #include <QQuickWindow>
+#include <QSqlDatabase>
+#include <QDebug>
+
+using namespace std;
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     a.setWindowIcon(QIcon("picture/v7.ico"));
 
-    QQuickView view ;
-    view.setSource(QUrl::fromLocalFile("views/SFBJ.qml"));
-    view.show();
+    QSqlDatabase db  = QSqlDatabase::addDatabase("QSQLITE");
+    db.setHostName("localhost");
+    db.setDatabaseName("database.db");
+    if(!db.open())
+    {
+        qDebug() << "数据库不能打开" ;
+    }
 
-
+    QQuickView *view  =  new QQuickView;
+    view->setSource(QUrl::fromLocalFile("views/SFBJ.qml"));
+    view->show();
 
     return a.exec();
 }
