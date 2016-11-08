@@ -4,16 +4,20 @@
 #
 #-------------------------------------------------
 
-QT += core gui widgets xml qml
+QT += core gui widgets xml qml quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 DESTDIR +=../bin
+#DESTDIR +=./bin
 TARGET = lifeIsChose
 
 TEMPLATE = app
 
 SOURCES += main.cpp
+
+#include(deployment.pri)
+
 
 #加载图标文件
 RC_FILE  = logo.rc
@@ -22,5 +26,6 @@ HEADERS  +=
 
 DISTFILES += \
     logo.rc \
+    views/SFBJ.qml
 
 
