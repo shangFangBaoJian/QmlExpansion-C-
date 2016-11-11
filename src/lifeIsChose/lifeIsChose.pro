@@ -16,7 +16,8 @@ DESTDIR +=../bin
 #DESTDIR +=./bin
 TARGET = lifeIsChose
 
-
+#OBJECTS_DIR=../build/$$TARGET/obj
+#MOC_DIR=../build/$$TARGET/moc
 
 TEMPLATE = app
 
