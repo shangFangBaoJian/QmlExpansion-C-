@@ -6,7 +6,7 @@
 
 QT += core gui widgets xml qml quick sql
 
-include(deployment.pri)
+#include(deployment.pri)
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,13 +21,15 @@ TARGET = lifeIsChose
 
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    SFBJApplication.cpp
 
 
 #加载图标文件
 RC_FILE  = logo.rc
 
-HEADERS  +=
+HEADERS  += \
+    sfbjapplication.h
 
 DISTFILES += \
     logo.rc

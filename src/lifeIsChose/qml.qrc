@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>views/SFBJ.qml</file>
+        <file>views/SFBJView.qml</file>
     </qresource>
 </RCC>
