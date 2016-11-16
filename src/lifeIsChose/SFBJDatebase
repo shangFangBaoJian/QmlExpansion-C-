@@ -1,6 +1,0 @@
-#include "SFBJDatebase"
-
-SFBJDatebase::SFBJDatebase(QObject *parent) : QObject(parent)
-{
-
-}

@@ -22,14 +22,16 @@ TARGET = lifeIsChose
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    SFBJApplication.cpp
+    sfbjdatebase.cpp
+
 
 
 #加载图标文件
 RC_FILE  = logo.rc
 
-HEADERS  += \
-    sfbjapplication.h
+HEADERS  +=
+
+
 
 DISTFILES += \
     logo.rc
