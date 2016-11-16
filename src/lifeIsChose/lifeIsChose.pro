@@ -10,6 +10,10 @@ QT += core gui widgets xml qml quick sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+!include(../kernel/utils.pri){
+      error("this is error of path")
+}
+
 CONFIG += c++11
 
 DESTDIR +=../bin
@@ -22,7 +26,6 @@ TARGET = lifeIsChose
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    sfbjdatebase.cpp
 
 
 
