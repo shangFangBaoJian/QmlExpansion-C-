@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>views/SFBJ.qml</file>
         <file>views/SFBJView.qml</file>
+        <file>views/SFBJHeader.qml</file>
+        <file>views/SFBJBottomer.qml</file>
     </qresource>
 </RCC>

@@ -1,12 +1,32 @@
 import QtQuick 2.0
 
-SFBJ {
+SFBJ
+{
     id:root
-    Rectangle{
+    Rectangle
+    {
         anchors.fill: parent
-        width:800
-        height:600
         radius: 10
         color: "#33FFFF"
+        Column
+        {
+            anchors.fill:parent
+            SFBJHeader
+            {
+                id:header
+            }
+            Rectangle
+            {
+                id:mainly
+                width:parent.width
+                height:parent.height - header.height - bottomer.height
+                color:"green"
+            }
+
+            SFBJBottomer
+            {
+                id:bottomer
+            }
+        }
     }
 }
