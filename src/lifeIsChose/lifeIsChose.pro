@@ -25,19 +25,16 @@ TARGET = lifeIsChose
 
 TEMPLATE = app
 
-SOURCES += main.cpp \
-
-
-
 #加载图标文件
 RC_FILE  = logo.rc
 
 HEADERS  +=
 
-
+SOURCES += main.cpp \
 
 DISTFILES += \
-    logo.rc
+    logo.rc \
+    config/SFBJ.ini
 
 RESOURCES += \
     qml.qrc

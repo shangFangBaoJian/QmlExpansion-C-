@@ -4,5 +4,7 @@
         <file>views/SFBJView.qml</file>
         <file>views/SFBJHeader.qml</file>
         <file>views/SFBJBottomer.qml</file>
+        <file>picture/renlian.gif</file>
+        <file>views/SFBJVerticalCenter.qml</file>
     </qresource>
 </RCC>

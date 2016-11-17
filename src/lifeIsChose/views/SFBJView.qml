@@ -15,12 +15,14 @@ SFBJ
             {
                 id:header
             }
+
             Rectangle
             {
                 id:mainly
                 width:parent.width
                 height:parent.height - header.height - bottomer.height
                 color:"green"
+
             }
 
             SFBJBottomer
