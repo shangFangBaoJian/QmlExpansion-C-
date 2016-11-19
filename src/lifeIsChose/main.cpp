@@ -26,5 +26,6 @@ int main(int argc, char *argv[])
     view->setSource(QUrl(QLatin1String("qrc:/views/SFBJView.qml")));
     view->show();
 
+    //****/
     return a.exec();
 }
