@@ -44,5 +44,5 @@ void sfbjapplication::stop()
 
 int sfbjapplication::initIni()
 {
-    
+    return 0;
 }
