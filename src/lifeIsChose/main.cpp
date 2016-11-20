@@ -7,6 +7,9 @@
 #include <QSqlDatabase>
 #include <QDebug>
 
+#include <sfbjapplication.h>
+
+
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -26,6 +29,8 @@ int main(int argc, char *argv[])
     view->setSource(QUrl(QLatin1String("qrc:/views/coding/SFBJView.qml")));
     view->show();
 
+    sfbjapplication sfbjapp;
+   
     
     return a.exec();
 }

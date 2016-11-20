@@ -42,3 +42,7 @@ void sfbjapplication::stop()
     
 }
 
+int sfbjapplication::initIni()
+{
+    
+}
