@@ -28,9 +28,11 @@ TEMPLATE = app
 #加载图标文件
 RC_FILE  = logo.rc
 
-HEADERS  +=
+HEADERS  += \
+    sfbjapplication.h
 
 SOURCES += main.cpp \
+    sfbjapplication.cpp
 
 DISTFILES += \
     logo.rc \
