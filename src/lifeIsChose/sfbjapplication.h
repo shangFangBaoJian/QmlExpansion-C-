@@ -7,7 +7,7 @@ class sfbjapplication : public  QObject
 {
 public:
     sfbjapplication();
-    ~sfbjapplication();
+    
     
     bool init();
     bool start();

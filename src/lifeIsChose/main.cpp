@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     }
 
     QQuickView *view  =  new QQuickView;
-    view->setSource(QUrl(QLatin1String("qrc:/views/SFBJView.qml")));
+    view->setSource(QUrl(QLatin1String("qrc:/views/coding/SFBJView.qml")));
     view->show();
 
     

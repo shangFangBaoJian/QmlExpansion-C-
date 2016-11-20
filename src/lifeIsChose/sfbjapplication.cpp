@@ -7,14 +7,14 @@ sfbjapplication::sfbjapplication()
 
 bool sfbjapplication::init()
 {
-    if(!initView("SFBJView"))
-    {
-        error("view init failed");
-    }
-    else
-    {
-        return false;
-    }
+//    if(!initView(""))
+//    {
+//        std::cout << ("view init failed");
+//    }
+//    else
+//    {
+//        return false;
+//    }
     return true;
 }
 
@@ -29,18 +29,16 @@ bool sfbjapplication::start()
 
 int sfbjapplication::initView(QString &name)
 {
-    if(name = "")
-    {
+//    if(name = "")
+//    {
         
-    }
+//    }
+    Q_UNUSED(name);
+    return 0;
 }
 
 void sfbjapplication::stop()
 {
-    ~sfbjapplication();
-}
-
-sfbjapplication::~sfbjapplication()
-{
     
 }
+
