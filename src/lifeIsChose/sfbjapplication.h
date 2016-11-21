@@ -2,7 +2,8 @@
 #define SFBJAPPLICATION_H
 
 #include <QQuickView>
-//#include "inifile.h"
+#include "../kernel/iniconfig/inifile.h"
+
 class sfbjapplication : public  QObject
 {
     Q_OBJECT
@@ -14,12 +15,12 @@ public:
     bool start();
     void stop();
     int initView(QString &name);
-    int initIni();
+    int initIni(QString iniFileName);
     
 private:
     QQuickView view;
     QString inifileName;
-//    inifile iniFile;
+    inifile iniFile;
 };
 
 #endif // SFBJAPPLICATION_H

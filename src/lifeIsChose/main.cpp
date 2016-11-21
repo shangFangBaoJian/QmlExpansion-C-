@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     view->show();
 
     sfbjapplication sfbjapp;
-   
+    sfbjapp.initIni("SFBJ.ini");
     
     return a.exec();
 }

@@ -42,7 +42,11 @@ void sfbjapplication::stop()
     
 }
 
-int sfbjapplication::initIni()
+int sfbjapplication::initIni(QString iniFileName)
 {
-    return 0;
+    if(iniFileName == "")
+        return 0;
+
+    int ret = inifile::readIni("SFBJ.ini");
+    return ret;
 }

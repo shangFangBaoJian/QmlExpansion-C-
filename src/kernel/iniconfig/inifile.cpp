@@ -5,7 +5,7 @@ inifile::inifile(QObject *parent) : QObject(parent)
     
 }
 
-QString inifile::readIni(QString &fileName)
+QString inifile::readIni(QString fileName)
 {
     if(fileName.compare("")  == 0 )
     {

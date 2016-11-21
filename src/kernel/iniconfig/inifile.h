@@ -11,7 +11,7 @@ class inifile : public QObject
 public:
     explicit inifile(QObject *parent = 0);
     
-    QString readIni(QString &fileName);
+    QString readIni(QString fileName);
     QString writeIni(QString &fileName,QString &groupName,QString &groupConfig);
     
 signals:
