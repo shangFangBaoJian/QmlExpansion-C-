@@ -14,8 +14,10 @@ INCLUDEPATH += $$../kernal
 
 SOURCES += \
     $$PWD/communication/sfbjdatabase.cpp \
-    $$PWD/iniconfig/inifile.cpp
+    $$PWD/iniconfig/inifile.cpp \
+    $$PWD/application/contextview.cpp
 
 HEADERS  += \
     $$PWD/communication/sfbjdatabase.h \
-    $$PWD/iniconfig/inifile.h
+    $$PWD/iniconfig/inifile.h \
+    $$PWD/application/contextview.h

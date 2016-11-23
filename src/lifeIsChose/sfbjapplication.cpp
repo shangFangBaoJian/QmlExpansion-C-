@@ -47,6 +47,8 @@ int sfbjapplication::initIni(QString iniFileName)
     if(iniFileName == "")
         return 0;
 
-    int ret = inifile::readIni("SFBJ.ini");
-    return ret;
+//    QString ret = inifile::readIni("SFBJ.ini");
+//    qDebug() << "ret :" <<ret;
+    
+    return 0;
 }

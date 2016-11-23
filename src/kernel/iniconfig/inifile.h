@@ -12,7 +12,7 @@ public:
     explicit inifile(QObject *parent = 0);
     
     QString readIni(QString fileName);
-    QString writeIni(QString &fileName,QString &groupName,QString &groupConfig);
+    QString writeIni(QString fileName,QString groupName,QString groupConfig);
     
 signals:
     
