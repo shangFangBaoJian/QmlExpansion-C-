@@ -8,6 +8,8 @@
 #include <QDebug>
 
 #include <sfbjapplication.h>
+#include "../kernel/application/contextview.h"
+#include <QQmlContext>
 
 
 using namespace std;
@@ -15,6 +17,8 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    /******
     a.setWindowIcon(QIcon("picture/v7.ico"));
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QSqlDatabase db  = QSqlDatabase::addDatabase("QSQLITE");
@@ -25,12 +29,23 @@ int main(int argc, char *argv[])
         qDebug() << "数据库不能打开" ;
     }
 
-    QQuickView *view  =  new QQuickView;
-    view->setSource(QUrl(QLatin1String("qrc:/views/coding/SFBJView.qml")));
-    view->show();
 
     sfbjapplication sfbjapp;
     sfbjapp.initIni("SFBJ.ini");
+
+    ********/
+
+    contextview *ert = new contextview;
+    QQuickView view;
+
+//    view.setResizeMode(QQuickView::SizeRootObjectToView);
+    view.setSource(QUrl("./views/coding/SFBJView.qml"));
+    view.rootContext()->setContextProperty("jj",ert);
+//    view.setObjectName("happ");
+
+    view.show();
+
+
     
     return a.exec();
 }

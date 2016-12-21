@@ -10,6 +10,15 @@ Item
 
     property int currentview:0
     
+
+    property variant hap:jj
+
+    Component.onCompleted:
+    {
+        console.log("ok!");
+        root.hap.invoke("fffff",0);
+
+    }
     
 }
 

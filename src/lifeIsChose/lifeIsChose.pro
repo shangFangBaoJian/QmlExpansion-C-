@@ -20,8 +20,8 @@ DESTDIR +=../bin
 #DESTDIR +=./bin
 TARGET = lifeIsChose
 
-#OBJECTS_DIR=../build/$$TARGET/obj
-#MOC_DIR=../build/$$TARGET/moc
+OBJECTS_DIR=../build/$$TARGET/obj
+MOC_DIR=../build/$$TARGET/moc
 
 TEMPLATE = app
 
@@ -36,9 +36,16 @@ SOURCES += main.cpp \
 
 DISTFILES += \
     logo.rc \
-    config/SFBJ.ini
+    config/SFBJ.ini \
+    views/coding/SFBJ.qml \
+    views/coding/SFBJBottomer.qml \
+    views/coding/SFBJHeader.qml \
+    views/coding/SFBJVerticalCenter.qml \
+    views/coding/SFBJView.qml \
+    views/coding/Test.qml \
+    views/model/SFBJButton.qml \
+    views/images/renlian.gif
 
-RESOURCES += \
-    qml.qrc
+RESOURCES +=
 
 

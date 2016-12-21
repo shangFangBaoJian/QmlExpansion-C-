@@ -2,12 +2,14 @@ import QtQuick 2.0
 
 SFBJ
 {
-    id:root
     Rectangle
     {
         anchors.fill: parent
         radius: 10
         color: "#33FFFF"
+
+
+
         Column
         {
             anchors.fill:parent
@@ -19,6 +21,12 @@ SFBJ
             SFBJVerticalCenter
             {
                 id:mainly
+
+                Test
+                {
+                    id:tt
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
             }
 
             SFBJBottomer

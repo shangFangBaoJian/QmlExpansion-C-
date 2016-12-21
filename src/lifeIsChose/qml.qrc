@@ -1,11 +1,1 @@
-<RCC>
-    <qresource prefix="/">
-        <file>views/coding/SFBJ.qml</file>
-        <file>views/coding/SFBJBottomer.qml</file>
-        <file>views/coding/SFBJHeader.qml</file>
-        <file>views/coding/SFBJVerticalCenter.qml</file>
-        <file>views/coding/SFBJView.qml</file>
-        <file>views/images/renlian.gif</file>
-        <file>views/model/SFBJButton.qml</file>
-    </qresource>
-</RCC>
+<RCC/>
