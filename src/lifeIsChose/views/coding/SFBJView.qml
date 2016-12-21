@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 SFBJ
 {
+    id:tt
     Rectangle
     {
         anchors.fill: parent
@@ -24,7 +25,7 @@ SFBJ
 
                 Test
                 {
-                    id:tt
+                    id:tit
                     anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
@@ -35,4 +36,6 @@ SFBJ
             }
         }//Column
     }//Rectangle
+
+
 }

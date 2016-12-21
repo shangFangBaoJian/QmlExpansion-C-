@@ -2,7 +2,7 @@ import QtQuick 2.0
 
 Item
 {
-    id:root
+    id:tt
     width:800
     height:600
 
@@ -13,12 +13,13 @@ Item
 
     property variant hap:jj
 
+    property variant filds:jj.filds
+
     Component.onCompleted:
     {
         console.log("ok!");
-        root.hap.invoke("fffff",0);
+        tt.hap.invoke("fffff",0);
 
     }
-    
 }
 

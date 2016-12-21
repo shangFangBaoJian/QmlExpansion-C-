@@ -11,7 +11,7 @@ Item {
         {
             width: 80
             height: 50
-            color:"red"
+            color:tt.filds["1"]
         }
 
         Rectangle

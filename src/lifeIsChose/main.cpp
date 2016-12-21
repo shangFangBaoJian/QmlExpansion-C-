@@ -1,7 +1,7 @@
 #include <QApplication>
 #include <QGuiApplication>
-#include<QQmlApplicationEngine>
-#include<QWindow>
+#include <QQmlApplicationEngine>
+#include <QWindow>
 #include <QQuickView>
 #include <QQuickWindow>
 #include <QSqlDatabase>
@@ -35,17 +35,14 @@ int main(int argc, char *argv[])
 
     ********/
 
-    contextview *ert = new contextview;
+    contextview ert;
     QQuickView view;
-
-//    view.setResizeMode(QQuickView::SizeRootObjectToView);
-    view.setSource(QUrl("./views/coding/SFBJView.qml"));
-    view.rootContext()->setContextProperty("jj",ert);
-//    view.setObjectName("happ");
-
+    QVariantMap mapp;
+    mapp["1"] = "blue";
+    view.rootContext()->setContextProperty("jj",&ert);
+    view.setSource(QUrl::fromLocalFile("./views/coding/SFBJView.qml"));
+    ert.qmlWrite(mapp);
     view.show();
 
-
-    
     return a.exec();
 }
