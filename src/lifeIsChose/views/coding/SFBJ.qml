@@ -13,7 +13,9 @@ Item
 
     property variant hap:jj
 
-    property variant filds:jj.filds
+    property variant pp:jj.filds
+
+//    property string ff: filds["1"]
 
     Component.onCompleted:
     {

@@ -11,7 +11,7 @@ Item {
         {
             width: 80
             height: 50
-            color:tt.filds["1"]
+            color:tt.pp["3"]
         }
 
         Rectangle
@@ -22,7 +22,7 @@ Item {
 
             Text
             {
-                text:"Button"
+                text:tt.pp["1"]
             }
             MouseArea
             {

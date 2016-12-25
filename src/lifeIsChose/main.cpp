@@ -10,6 +10,7 @@
 #include <sfbjapplication.h>
 #include "../kernel/application/contextview.h"
 #include <QQmlContext>
+#include <QString>
 
 
 using namespace std;
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    /******
+
     a.setWindowIcon(QIcon("picture/v7.ico"));
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QSqlDatabase db  = QSqlDatabase::addDatabase("QSQLITE");
@@ -33,16 +34,27 @@ int main(int argc, char *argv[])
     sfbjapplication sfbjapp;
     sfbjapp.initIni("SFBJ.ini");
 
-    ********/
+
 
     contextview ert;
     QQuickView view;
     QVariantMap mapp;
-    mapp["1"] = "blue";
-    view.rootContext()->setContextProperty("jj",&ert);
-    view.setSource(QUrl::fromLocalFile("./views/coding/SFBJView.qml"));
+    mapp["1"] = "330000";
+
+    mapp["3"] = "red";
     ert.qmlWrite(mapp);
+//    ert.setProperty("rt",true);
+    view.rootContext()->setContextProperty("jj",&ert);
+
+
+    view.setSource(QUrl::fromLocalFile("./views/coding/SFBJView.qml"));
+
     view.show();
+    mapp["3"] = "#330000";
+    ert.qmlWrite(mapp);
+
+
+//    ert.qmlWrite(mapp);
 
     return a.exec();
 }
