@@ -29,10 +29,14 @@ TEMPLATE = app
 RC_FILE  = logo.rc
 
 HEADERS  += \
-    sfbjapplication.h
+    sfbjapplication.h \
+    interface/widget_demo1/mywidget.h \
+    interface/dialog_demo1/mydialog.h
 
 SOURCES += main.cpp \
-    sfbjapplication.cpp
+    sfbjapplication.cpp \
+    interface/widget_demo1/mywidget.cpp \
+    interface/dialog_demo1/mydialog.cpp
 
 DISTFILES += \
     logo.rc \

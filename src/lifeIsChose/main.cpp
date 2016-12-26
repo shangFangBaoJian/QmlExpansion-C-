@@ -11,50 +11,38 @@
 #include "../kernel/application/contextview.h"
 #include <QQmlContext>
 #include <QString>
+#include <QtGui>
+#include <QTextCodec>
 
+#include <QWidget>
+#include <QLabel>
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
-
     a.setWindowIcon(QIcon("picture/v7.ico"));
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QSqlDatabase db  = QSqlDatabase::addDatabase("QSQLITE");
-    db.setHostName("localhost");
-    db.setDatabaseName("database.db");
-    if(!db.open())
-    {
-        qDebug() << "数据库不能打开" ;
-    }
-
 
     sfbjapplication sfbjapp;
     sfbjapp.initIni("SFBJ.ini");
 
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 
+    QWidget *widget = new QWidget();
+    widget->setWindowTitle(QObject::tr("i am widget"));
+    QLabel *label = new QLabel();
+    label->setWindowTitle(QObject::tr("i am Label"));
+    label->setText(QObject::tr("label:i am label"));
+    label->resize(180,20);
+    QLabel *label2 = new QLabel(widget);
+    label2->setText(QObject::tr("label2 donot a XXX"));
+    label2->resize(200,50);
+    label->show();
+    widget->show();
+    int ret = a.exec();
 
-    contextview ert;
-    QQuickView view;
-    QVariantMap mapp;
-    mapp["1"] = "330000";
-
-    mapp["3"] = "red";
-    ert.qmlWrite(mapp);
-//    ert.setProperty("rt",true);
-    view.rootContext()->setContextProperty("jj",&ert);
-
-
-    view.setSource(QUrl::fromLocalFile("./views/coding/SFBJView.qml"));
-
-    view.show();
-    mapp["3"] = "#330000";
-    ert.qmlWrite(mapp);
-
-
-//    ert.qmlWrite(mapp);
-
-    return a.exec();
+    delete label;
+    delete widget;
+    return ret;
 }
